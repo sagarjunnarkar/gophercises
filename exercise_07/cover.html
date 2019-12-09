@@ -76,7 +76,7 @@
 		</div>
 		<div id="content">
 		
-		<pre class="file" id="file0" style="display: none">//Package cmd creates commands
+		<pre class="file" id="file0" style="display: none">//Package cmd defines all new commands for the task command line utility.
 package cmd
 
 import (
@@ -201,11 +201,14 @@ import (
 var taskBucket = []byte("tasks")
 var db *bolt.DB
 
+// Task is struct which defines key value pair.
+// Here key is serial number of Task and value is actual task.
 type Task struct {
         Key   int
         Value string
 }
 
+//Init function is to create new bolt db connection and to create bolt db bucket
 func Init(dbPath string) error <span class="cov8" title="1">{
         var err error
         db, err = bolt.Open(dbPath, 0600, &amp;bolt.Options{Timeout: 1 * time.Second})
@@ -218,6 +221,7 @@ func Init(dbPath string) error <span class="cov8" title="1">{
         }</span>)
 }
 
+//MockMyUpdate is variable which is used in mocking bolt's update function.
 var MockMyUpdate = myUpdate
 
 func myUpdate(task string) (int, error) <span class="cov8" title="1">{
@@ -234,6 +238,7 @@ func myUpdate(task string) (int, error) <span class="cov8" title="1">{
         <span class="cov8" title="1">return id, err</span>
 }
 
+//CreateTask is a function to insert new task in bolt db
 func CreateTask(task string) (int, error) <span class="cov8" title="1">{
         id, err := MockMyUpdate(task)
 
@@ -244,6 +249,7 @@ func CreateTask(task string) (int, error) <span class="cov8" title="1">{
         <span class="cov8" title="1">return id, nil</span>
 }
 
+//FindAll is a function to list all the tasks.
 func FindAll() ([]Task, error) <span class="cov8" title="1">{
         var tasks []Task
 
@@ -262,8 +268,10 @@ func FindAll() ([]Task, error) <span class="cov8" title="1">{
         <span class="cov8" title="1">return tasks, err</span>
 }
 
+//MockFindAll is mock variable used for go unit testing.
 var MockFindAll = FindAll
 
+//AllTasks is a function to list all tasks.
 func AllTasks() ([]Task, error) <span class="cov8" title="1">{
 
         tasks, err := MockFindAll()
@@ -274,7 +282,7 @@ func AllTasks() ([]Task, error) <span class="cov8" title="1">{
         <span class="cov8" title="1">return tasks, nil</span>
 }
 
-//MyDeleteTask comment
+//MyDeleteTask is a function for deleting object from bolt db.
 func MyDeleteTask(key int) error <span class="cov8" title="1">{
         return db.Update(func(tx *bolt.Tx) error </span><span class="cov8" title="1">{
                 b := tx.Bucket(taskBucket)
@@ -282,10 +290,10 @@ func MyDeleteTask(key int) error <span class="cov8" title="1">{
         }</span>)
 }
 
-//MockDeleteTask comment
+//MockDeleteTask is a mock variable used in go unit testing.
 var MockDeleteTask = MyDeleteTask
 
-//DeleteTask comment
+//DeleteTask is a exported function used to delete a task from bolt db.
 func DeleteTask(key int) error <span class="cov8" title="1">{
         return MockDeleteTask(key)
 }</span>
