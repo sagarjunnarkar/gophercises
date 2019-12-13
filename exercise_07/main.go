@@ -2,8 +2,9 @@ package main
 
 import (
 	"fmt"
-	"gophercises/task/cmd"
-	"gophercises/task/db"
+	"gophercises/exercise_07/cmd"
+	"gophercises/exercise_07/db"
+
 	"path/filepath"
 
 	"github.com/mitchellh/go-homedir"

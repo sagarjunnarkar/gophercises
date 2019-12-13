@@ -2,7 +2,8 @@ package cmd
 
 import (
 	"errors"
-	"gophercises/task/db"
+	"gophercises/exercise_07/db"
+
 	"testing"
 )
 

@@ -54,15 +54,15 @@
 			<div id="nav">
 				<select id="files">
 				
-				<option value="file0">gophercises/task/cmd/add.go (100.0%)</option>
+				<option value="file0">gophercises/exercise_07/cmd/add.go (100.0%)</option>
 				
-				<option value="file1">gophercises/task/cmd/do.go (75.0%)</option>
+				<option value="file1">gophercises/exercise_07/cmd/do.go (75.0%)</option>
 				
-				<option value="file2">gophercises/task/cmd/list.go (72.7%)</option>
+				<option value="file2">gophercises/exercise_07/cmd/list.go (72.7%)</option>
 				
-				<option value="file3">gophercises/task/db/tasks.go (100.0%)</option>
+				<option value="file3">gophercises/exercise_07/db/tasks.go (100.0%)</option>
 				
-				<option value="file4">gophercises/task/main.go (50.0%)</option>
+				<option value="file4">gophercises/exercise_07/main.go (50.0%)</option>
 				
 				</select>
 			</div>
@@ -81,7 +81,8 @@ package cmd
 
 import (
         "fmt"
-        "gophercises/task/db"
+        "gophercises/exercise_07/db"
+
         "strings"
 
         "github.com/spf13/cobra"
@@ -110,7 +111,8 @@ func init() <span class="cov8" title="1">{
 
 import (
         "fmt"
-        "gophercises/task/db"
+        "gophercises/exercise_07/db"
+
         "strconv"
 
         "github.com/spf13/cobra"
@@ -159,7 +161,7 @@ func init() <span class="cov8" title="1">{
 
 import (
         "fmt"
-        "gophercises/task/db"
+        "gophercises/exercise_07/db"
 
         "github.com/spf13/cobra"
 )
@@ -313,8 +315,9 @@ func btoi(b []byte) int <span class="cov8" title="1">{
 
 import (
         "fmt"
-        "gophercises/task/cmd"
-        "gophercises/task/db"
+        "gophercises/exercise_07/cmd"
+        "gophercises/exercise_07/db"
+
         "path/filepath"
 
         "github.com/mitchellh/go-homedir"

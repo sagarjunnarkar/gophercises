@@ -3,7 +3,8 @@ package main
 import (
 	"errors"
 	"fmt"
-	"gophercises/task/db"
+	"gophercises/exercise_07/db"
+
 	"os"
 	"path/filepath"
 	"testing"

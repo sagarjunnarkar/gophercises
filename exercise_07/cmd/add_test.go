@@ -4,7 +4,8 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"gophercises/task/db"
+	"gophercises/exercise_07/db"
+
 	"log"
 	"os"
 	"path/filepath"

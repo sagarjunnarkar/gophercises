@@ -2,7 +2,8 @@ package cmd
 
 import (
 	"fmt"
-	"gophercises/task/db"
+	"gophercises/exercise_07/db"
+
 	"strconv"
 
 	"github.com/spf13/cobra"
