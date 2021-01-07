@@ -1,0 +1,24 @@
+runtime/debug.Stack(0x0, 0x0, 0x0)
+	/home/sagar/.gvm/gos/go1.13.4/src/runtime/debug/stack.go:24 +0xa1
+gophercises/exercise_15.devMw.func1.1(0xde28c0, 0xc0003402a0)
+	/home/sagar/.gvm/pkgsets/go1.13.4/global/src/gophercises/exercise_15/main.go:74 +0xdf
+panic(0xab68c0, 0xdd1370)
+	/home/sagar/.gvm/gos/go1.13.4/src/runtime/panic.go:679 +0x1e0
+gophercises/exercise_15.funcThatPanics()
+	/home/sagar/.gvm/pkgsets/go1.13.4/global/src/gophercises/exercise_15/main.go:89 +0x39
+gophercises/exercise_15.panicDemo(0xde28c0, 0xc0003402a0, 0xc0004c4700)
+	/home/sagar/.gvm/pkgsets/go1.13.4/global/src/gophercises/exercise_15/main.go:85 +0x20
+net/http.HandlerFunc.ServeHTTP(0xbdabb8, 0xde28c0, 0xc0003402a0, 0xc0004c4700)
+	/home/sagar/.gvm/gos/go1.13.4/src/net/http/server.go:2007 +0x44
+net/http.(*ServeMux).ServeHTTP(0xc00002f980, 0xde28c0, 0xc0003402a0, 0xc0004c4700)
+	/home/sagar/.gvm/gos/go1.13.4/src/net/http/server.go:2387 +0x1a6
+gophercises/exercise_15.devMw.func1(0xde28c0, 0xc0003402a0, 0xc0004c4700)
+	/home/sagar/.gvm/pkgsets/go1.13.4/global/src/gophercises/exercise_15/main.go:80 +0xb2
+net/http.HandlerFunc.ServeHTTP(0xc0001cc7e0, 0xde28c0, 0xc0003402a0, 0xc0004c4700)
+	/home/sagar/.gvm/gos/go1.13.4/src/net/http/server.go:2007 +0x44
+net/http.serverHandler.ServeHTTP(0xc0000cc0e0, 0xde28c0, 0xc0003402a0, 0xc0004c4700)
+	/home/sagar/.gvm/gos/go1.13.4/src/net/http/server.go:2802 +0x20f
+net/http.(*conn).serve(0xc000246000, 0xde3380, 0xc0001e4040)
+	/home/sagar/.gvm/gos/go1.13.4/src/net/http/server.go:1890 +0x1716
+created by net/http.(*Server).Serve
+	/home/sagar/.gvm/gos/go1.13.4/src/net/http/server.go:2927 +0x911
